@@ -1,438 +1,525 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>meirbannew</title>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fb</title>
     <style>
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        background-color: #f0f0f0;
-      }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            gap: 5px;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f0f0f0;
+        }
 
-      header {
-        width: 100%;
-        height: 60px;
-        background-image: url("back.png");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        padding: 10px 20px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
+        header {
+            width: 100%;
+            height: 60px;
+            background-image: url('back.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 20px;
+        }
 
-      .buttnn {
-        display: flex;
-        justify-content: space-around;
-        width: 600px;
-      }
+        .buttnn {
+            display: flex;
+            justify-content: space-around;
+            width: 600px;
+            position: absolute;
+            top: 11%;
+            left: 50%;
+        }
 
-      .buttnn a {
-        color: #ffffff;
-        text-decoration: none;
-        font-weight: bold;
-      }
+        .buttnn a {
+            color: #ffffff;
+            text-decoration: none;
+        }
 
-      .container {
-        display: flex;
-        width: 100%;
-        height: 1200px;
-        gap: 5px;
-      }
+        .container {
+            display: flex;
+            width: 100%;
+            height: 1200px;
+            gap: 5px;
+        }
 
-      nav {
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-        width: 15%;
-        gap: 5px;
-        background-color: #ffffff;
-        padding: 10px;
-      }
+        nav {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            width: 15%;
+            gap: 5px;
+            background-color: #ffffff;
+        }
 
-      .box1 {
-        display: grid;
-        justify-content: space-evenly;
-        height: 50px;
-        padding: 10px;
-        border-style: dashed;
-        border-color: #7d8186;
-      }
+        .box1 {
+            display: grid;
+            justify-content: space-evenly;
+            height: 50px;
+            padding: 20px;
+            border-style: dashed;
+            border-color: #7d8186;
+            gap: 5px;
+        }
 
-      .searchin {
-        background-color: #f0f0f0;
-        padding: 5px;
-        border: 1px solid #ccc;
-        width: 200px;
-      }
+        .searchin {
+            background-color: #f0f0f0;
+        }
 
-      .searchbutton {
-        position: relative;
-        width: 40px;
-        height: 35px;
-        background-color: #297bde;
-        color: #fff;
-        border: none;
-        cursor: pointer;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      }
+        .searchbutton {
+            position: relative;
+            width: 35px;
+            right: 0%;
+            box-shadow: #010101;
+            color: #f0f0f0;
+            background-color: #297bde;
+        }
 
-      .box2 {
-        display: flex;
-        flex-direction: column;
-        color: #297bde;
-        height: 120px;
-        padding: 20px;
-        border-style: dashed;
-        border-color: #7d8186;
-      }
+        .box2 {
+            display: flex;
+            flex-direction: column;
+            color: #297bde;
+            height: 120px;
+            padding: 20px;
+            border-style: dashed;
+            border-color: #7d8186;
+        }
 
-      section {
-        display: flex;
-        flex-direction: column;
-        width: 85%;
-        height: 100%;
-        border-style: ridge;
-        border-color: #7d8186;
-        background-color: #ffffff;
-        gap: 10px;
-      }
+        .nav img {
+            width: 100%;
+            height: auto;
+        }
 
-      .head2 {
-        display: flex;
-        justify-content: space-between;
-        background-color: #4c6cac;
-        color: #ffffff;
-        padding: 10px;
-      }
+        section {
+            display: flex;
+            flex-direction: column;
+            width: 85%;
+            height: 100%;
+            border-style: ridge;
+            border-color: #7d8186;
+            background-color: #ffffff;
+            gap: 10px;
+        }
 
-      .bie {
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        flex-grow: 1;
-        background-color: #ffffff;
-        gap: 20px;
-        padding: 20px;
-      }
+        .head2 {
+            width: 99%;
+            height: 2%;
+            display: flex;
+            justify-content: space-between;
+            background-color: #4c6cac;
+            color: #ffffff;
+            padding: 7px;
+            gap: 5px;
+        }
 
-      article {
-        display: flex;
-        flex-direction: column;
-        width: 50%;
-        background-color: #ffffff;
-        padding: 20px;
-      }
+        .bie {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            flex-grow: 1;
+            background-color: #ffffff;
+            gap: 10px;
+        }
 
-      .head3 {
-        width: 100%;
-        height: 150px;
-        background-color: #ffffff;
-        border-style: ridge;
-        border-color: #7d8186;
-      }
+        article {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            background-color: #ffffff;
+            padding: 20px;
+            row-gap: 20px;
+        }
 
-      .head3-1 {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: #4c6cac;
-        color: #ffffff;
-        padding: 20px;
-      }
+        .head3 {
+            width: 100%;
+            height: 150px;
+            background-color: #ffffff;
+            border-style: ridge;
+            border-color: #7d8186;
+            gap: 5px;
+        }
 
-      .head3 img {
-        width: 120px;
-        height: auto;
-        border-radius: 50%;
-      }
+        .head3-1 {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            height: 15%;
+            background-color: #4c6cac;
+            color: #ffffff;
+        }
 
-      .head3-2 {
-        display: flex;
-        flex-direction: column;
-        align-items: left;
-        padding: 10px;
-      }
+        .head3 img {
+            width: 127px;
+            height: auto;
+            position: absolute;
+            top: 27.7%;
+            left: 32%;
+        }
 
-      .pa1,
-      .pa2 {
-        display: flex;
-        align-items: center;
-        border-style: outset;
-        border-color: #7d8186;
-        padding: 10px;
-        width: 100%;
-        margin-bottom: 10px;
-      }
+        .head3-2 {
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            width: 100%;
+            height: 6%;
+            color: #297bde;
+        }
 
-      .arc3,
-      .arc4,
-      .arc5,
-      .arc6 {
-        padding: 10px;
-        border-style: ridge;
-        border-color: #7d8186;
-      }
+        .pa1 {
+            display: flex;
+            align-items: center;
+            border-style: outset;
+            border-color: #7d8186;
+            width: 100%;
+            height: 50%;
+        }
 
-      .arc3-1,
-      .arc4-1,
-      .arc5-1,
-      .arc6-1 {
-        background-color: #6289d8;
-        color: white;
-        padding: 10px;
-        text-align: center;
-      }
+        .pa2 {
+            display: flex;
+            align-items: center;
+            border-style: outset;
+            border-color: #7d8186;
+            width: 100%;
+            height: 50%;
+        }
 
-      .pros {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px;
-      }
+        .arc3 {
+            width: 100%;
+            height: 6%;
+            background-color: #ffffff;
+            border-style: ridge;
+            border-color: #7d8186;
+            text-align: center;
+            gap: 5px;
+        }
 
-      .pross {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-      }
+        .arc3-1 {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            height: 45%;
+            background-color: #4c6cac;
+            color: #ffffff;
+        }
 
-      .pross img {
-        width: 120px;
-        height: 160px;
-        gap: 5px;
-        padding: 8px;
-      }
+        .arc4 {
+            width: 100%;
+            height: 8%;
+            background-color: #ffffff;
+            border-style: ridge;
+            border-color: #7d8186;
+            text-align: left;
+            gap: 5px;
+        }
 
-      .pross p {
-        margin-top: 5px;
-        font-size: 14px;
-      }
+        .arc4-1 {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            height: 35%;
+            background-color: #4c6cac;
+            color: #ffffff;
+        }
 
-      aside {
-        display: flex;
-        flex-direction: column;
-        width: 50%;
-        background-color: #ffffff;
-        padding: 20px;
-      }
+        .arc5 {
+            width: 100%;
+            height: 8%;
+            background-color: #ffffff;
+            border-style: ridge;
+            border-color: #7d8186;
+            text-align: left;
+            gap: 5px;
+        }
 
-      .as1 {
-        width: 100%;
-        height: 100%;
-        background-color: #ffffff;
-        border-style: ridge;
-        border-color: #7d8186;
-      }
+        .arc5-1 {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            height: 35%;
+            background-color: #4c6cac;
+            color: #ffffff;
+        }
 
-      .as1-1 {
-        display: flex;
-        align-items: center;
-        width: 100%;
-        background-color: #26488b;
-        color: #ffffff;
-        padding: 10px;
-      }
+        .arc6 {
+            width: 100%;
+            height: 42%;
+            background-color: #ffffff;
+            border-style: ridge;
+            border-color: #7d8186;
+            text-align: left;
+            gap: 5px;
+        }
 
-      .profile {
-        width: 100%;
-        padding: 20px;
-      }
+        .arc6-1 {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            height: 7%;
+            background-color: #4c6cac;
+            color: #ffffff;
+        }
 
-      .label {
-        margin-left: 20px;
-      }
+        .pros {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
 
-      p {
-        margin: 5px 0;
-      }
+        .pross {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
 
-      mark {
-        color: #1c406b;
-        background-color: #ffffff;
-      }
+        .pross img {
+            width: 120px;
+            height: 160px;
+            gap: 5px;
+            padding: 8px;
+        }
+
+        .pross p {
+            margin-top: 5px;
+            font-size: 14px;
+        }
+
+        aside {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            background-color: #ffffff;
+            padding: 20px;
+            row-gap: 20px;
+        }
+
+        .as1 {
+            width: 100%;
+            height: 100%;
+            background-color: #ffffff;
+            border-style: ridge;
+            border-color: #7d8186;
+            text-align: left;
+            gap: 5px;
+        }
+
+        .as1-1 {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            height: 3%;
+            background-color: #4c6cac;
+            color: #ffffff;
+        }
+
+        .med {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            height: 97%;
+            background-color: #ffffff;
+            gap: 10px;
+        }
+
+        .profile {
+            width: 100%;
+            background-color: white;
+            padding: 20px;
+        }
+
+        .label {
+            margin-left: 20px;
+        }
+
+        p {
+            margin: 5px 0;
+        }
+
+        mark {
+            color: #297bde;
+            background-color: #ffffff;
+        }
     </style>
-  </head>
+</head>
 
-  <body>
+<body>
     <header>
-      <div class="buttnn">
-        <a href="index.html">home</a>
-        <a href="index.html">search</a>
-        <a href="index.html">global</a>
-        <a href="index.html">social net</a>
-        <a href="index.html">invite</a>
-        <a href="index.html">faq</a>
-        <a href="index.html">logout</a>
-      </div>
+        <div class="buttnn">
+            <a href="index.html">home</a>
+            <a href="index.html">search</a>
+            <a href="index.html">global</a>
+            <a href="index.html">social net</a>
+            <a href="index.html">invite</a>
+            <a href="index.html">faq</a>
+            <a href="index.html">logout</a>
+        </div>
     </header>
     <div class="container">
-      <nav>
-        <div class="box1">
-          <form action="/search" method="GET">
-            <input class="searchin" type="search" name="q" required />
-            <button class="searchbutton" type="submit">go</button>
-          </form>
-        </div>
-        <div class="box2">
-          <div>My Profile [edit]</div>
-          <div>My Friends</div>
-          <div>My Groups</div>
-          <div>My Parties</div>
-          <div>My Messages</div>
-          <div>My Account</div>
-          <div>My Privacy</div>
-        </div>
-        <img src="summer.png" alt="profile image" />
-      </nav>
-      <section>
-        <div class="head2">
-          <div>Brian Moore's Profile</div>
-          <div>Puget Sound</div>
-        </div>
-        <div class="bie">
-          <article>
-            <div class="head3">
-              <div class="head3-1">
-                <img src="img2.png" alt="Brian Moore" />
-              </div>
+        <nav>
+            <div class="box1">
+                <form action="/search" method="GET">
+                    <input class="searchin" type="search" name="q" required>
+                    <p>quick search <button class="searchbutton" type="submit">go</button></p>
+                </form>
             </div>
-            <div class="head3-2">
-              <div class="pa1">
-                <p>Send Brian a Message</p>
-              </div>
-              <div class="pa2">
-                <p>Poke Html</p>
-              </div>
+            <div class="box2">
+                <div>My Profile [edit]</div>
+                <div>My Friends</div>
+                <div>My Groups</div>
+                <div>My Parties</div>
+                <div>My Messages</div>
+                <div>My Account</div>
+                <div>My Privacy</div>
             </div>
-            <div class="arc3">
-              <div class="arc3-1">
-                <p>Connection</p>
-              </div>
-              <p>You are in a relationship with Brian.</p>
+            <img src="img1.png">
+        </nav>
+        <section>
+            <div class="head2">
+                <div>Brian Moore's Profile</div>
+                <div>Puget Sound</div>
             </div>
-            <div class="arc4">
-              <div class="arc4-1">
-                <p>Mutual Friends</p>
-              </div>
-              <p>You have <mark>19 friends</mark> in common with Brian.</p>
-            </div>
-            <div class="arc5">
-              <div class="arc5-1">
-                <p>Access</p>
-              </div>
-              <p>
-                Brian is currently logged in from a non-residential location.
-              </p>
-            </div>
-            <div class="arc6">
-              <div class="arc6-1">
-                <p>Friends at Puget Sound</p>
-              </div>
-              <div class="pros">
-                <div class="pross">
-                  <img src="pro1.png" alt="Kerala Hise" />
-                  <p>Kerala Hise</p>
-                </div>
-                <div class="pross">
-                  <img src="pro2.png" alt="Jennifer McFadden" />
-                  <p>Jennifer McFadden</p>
-                </div>
-                <div class="pross">
-                  <img src="pro4.png" alt="Amy Graeber" />
-                  <p>Amy Graeber</p>
-                </div>
-                <div class="pross">
-                  <img src="pro4.png" alt="Sarah Spurlock" />
-                  <p>Sarah Spurlock</p>
-                </div>
-                <div class="pross">
-                  <img src="pro5.png" alt="Vu Tran" />
-                  <p>Vu Tran</p>
-                </div>
-                <div class="pross">
-                  <img src="pro6.png" alt="Briana Skirm" />
-                  <p>Briana Skirm</p>
-                </div>
-              </div>
-            </div>
-          </article>
-          <aside>
-            <div class="as1">
-              <div class="as1-1">
-                <p>Information</p>
-              </div>
-              <div class="med">
-                <div class="profile">
-                    <h2>Account Info:</h2>
-                    <p>Name:<span style="margin-left: 150px;">Brian Moore</span></p>
-                    <p>Member Since:<span style="margin-left: 90px;">May 21, 2005</span></p>
-                    <p>Last Update:<span style="margin-left: 103px;"> July 19, 2005</span></p>
+            <div class="bie">
+                <article>
+                    <div class="head3">
+                        <div class="head3-1">
+                            <p>Picture</p>
+                        </div>
+                        <img src="img2.png">
+                    </div>
+                    <div class="head3-2">
+                        <div class="pa1">
+                            <p>Send Brian a Message</p>
+                        </div>
+                        <div class="pa2">
+                            <p>Poke Html</p>
+                        </div>
+                    </div>
+                    <div class="arc3">
+                        <div class="arc3-1">
+                            <p>Connection</p>
+                        </div>
+                        <p>You are in a relationship with Brian.</p>
+                    </div>
+                    <div class="arc4">
+                        <div class="arc4-1">
+                            <p>Mutual Friends</p>
+                        </div>
+                        <p>You have <mark>19 friends</mark> in common with Brian.</p>
+                    </div>
+                    <div class="arc5">
+                        <div class="arc5-1">
+                            <p>Access</p>
+                        </div>
+                        <p>Brian is currently logged in from a non-resisdential location.</p>
+                    </div>
+                    <div class="arc6">
+                        <div class="arc6-1">
+                            <p>Friends at Puget Sound</p>
+                        </div>
+                        <div class="pros">
+                            <div class="pross">
+                                <img src="pro1.png" alt="Kerala Hise">
+                                <p>Kerala Hise</p>
+                            </div>
+                            <div class="pross">
+                                <img src="pro2.png" alt="Jennifer McFadden">
+                                <p>Jennifer McFadden</p>
+                            </div>
+                            <div class="pross">
+                                <img src="pro3.png" alt="Amy Graeber">
+                                <p>Amy Graeber</p>
+                            </div>
+                            <div class="pross">
+                                <img src="pro4.png" alt="Sarah Spurlock">
+                                <p>Sarah Spurlock</p>
+                            </div>
+                            <div class="pross">
+                                <img src="pro5.png" alt="Vu Tran">
+                                <p>Vu Tran</p>
+                            </div>
+                            <div class="pross">
+                                <img src="pro6.png" alt="Briana Skirm">
+                                <p>Briana Skirm</p>
+                            </div>
+                        </div>
 
-                    <h3>Basic Info:</h3>
-                    <p>School:<span style="margin-left: 138px;"> <mark>Puget Sound '09</mark></span></p>
-                    <p>Status:<span style="margin-left: 141px;"> Student</span></p>
-                    <p>Sex:<span style="margin-left: 163px;"><mark>Male</mark></span></p>
-                    <p>Residence:<span style="margin-left: 110px;"> <mark>Todd 311</mark></span></p>
-                    <p>Birthday:<span style="margin-left: 128px;"> <mark>09/02/1986</mark></span></p>
-                    <p>Home Town:<span style="margin-left: 108px;"><mark>Shorewood, WI 53211</mark></span></p>
-                    <p>High School:<span style="margin-left: 106px;"><mark>Shorewood H.S. '05</mark></span></p>
+                    </div>
+                </article>
+                <aside>
+                    <div class="as1">
+                        <div class="as1-1">
+                            <p>Information</p>
+                        </div>
+                        <div class="med">
+                            <div class="profile">
+                                <h2>Account Info:</h2>
+                                <p>Name:<span style="margin-left: 150px;">Brian Moore</span></p>
+                                <p>Member Since:<span style="margin-left: 90px;">May 21, 2005</span></p>
+                                <p>Last Update:<span style="margin-left: 103px;"> July 19, 2005</span></p>
 
-                    <h3>Contact Info:</h3>
-                    <p>Email:<span style="margin-left: 152px;">bmoore@ups.edu</span></p>
-                    <p>Screenname:<span style="margin-left: 98px;"> <mark>DoctaBu</mark></span></p>
-                    <p>Mobile:<span style="margin-left: 142px;"> <mark>414-702-7426</mark></span></p>
-                    <p>Websites:<span style="margin-left: 125px;">
-                            <a href="http://www.doctabu.com"><mark>http://www.doctabu.com</mark></a></span><br>
-                        <span style="margin-left: 199px;">
-                            <a
-                                href="http://www.livejournal.com/users/doctabu"><mark>http://www.livejournal.com/users/doctabu</mark></a></span><br>
-                        <span style="margin-left: 199px;">
-                            <a
-                                href="http://www.flickr.com/photos/doctabu"><mark>http://www.flickr.com/photos/doctabu</mark></a></span>
-                    </p>
-                    <h3>Personal Info:</h3>
-                    <p>Looking For:<span style="margin-left: 108px;"> <mark>Friendship</mark></span></p>
-                    <p>Interested In:<span style="margin-left: 108px;"><mark>Women</mark></span></p>
-                    <p>Relationship Status: <span style="margin-left: 54px;"><mark>In a Relationship</mark></span> <br>
-                        <span style="margin-left: 200px;">with <a href="#"><mark>Rachel Buethe</mark></a> (Tiny Tykes Day
-                            Care)</span>
-                    </p>
-                    <p>Political Views:<span style="margin-left: 91px;"> <mark>Very Liberal</mark></span></p>
+                                <h3>Basic Info:</h3>
+                                <p>School:<span style="margin-left: 138px;"> <mark>Puget Sound '09</mark></span></p>
+                                <p>Status:<span style="margin-left: 141px;"> Student</span></p>
+                                <p>Sex:<span style="margin-left: 163px;"><mark>Male</mark></span></p>
+                                <p>Residence:<span style="margin-left: 110px;"> <mark>Todd 311</mark></span></p>
+                                <p>Birthday:<span style="margin-left: 128px;"> <mark>09/02/1986</mark></span></p>
+                                <p>Home Town:<span style="margin-left: 108px;"><mark>Shorewood, WI 53211</mark></span></p>
+                                <p>High School:<span style="margin-left: 106px;"><mark>Shorewood H.S. '05</mark></span></p>
 
-                    <p>Interests: <mark><span style="margin-left: 131px;">Film, Graphic Design, Video Editing,
-                            Computers, </span><br><span style="margin-left: 201px;">Bowling, Dancing,
-                            Acting, Music, Sleeping,</span><br><span style="margin-left: 201px;"></span>
-                        Being Crazy</span></mark></p>
+                                <h3>Contact Info:</h3>
+                                <p>Email:<span style="margin-left: 152px;">bmoore@ups.edu</span></p>
+                                <p>Screenname:<span style="margin-left: 98px;"> <mark>DoctaBu</mark></span></p>
+                                <p>Mobile:<span style="margin-left: 142px;"> <mark>414-702-7426</mark></span></p>
+                                <p>Websites:<span style="margin-left: 125px;">
+                                        <a href="http://www.doctabu.com"><mark>http://www.doctabu.com</mark></a></span><br>
+                                    <span style="margin-left: 199px;">
+                                        <a
+                                            href="http://www.livejournal.com/users/doctabu"><mark>http://www.livejournal.com/users/doctabu</mark></a></span><br>
+                                    <span style="margin-left: 199px;">
+                                        <a
+                                            href="http://www.flickr.com/photos/doctabu"><mark>http://www.flickr.com/photos/doctabu</mark></a></span>
+                                </p>
+                                <h3>Personal Info:</h3>
+                                <p>Looking For:<span style="margin-left: 108px;"> <mark>Friendship</mark></span></p>
+                                <p>Interested In:<span style="margin-left: 108px;"><mark>Women</mark></span></p>
+                                <p>Relationship Status: <span style="margin-left: 54px;"><mark>In a Relationship</mark></span> <br>
+                                    <span style="margin-left: 200px;">with <a href="#"><mark>Rachel Buethe</mark></a> (Tiny Tykes Day
+                                        Care)</span>
+                                </p>
+                                <p>Political Views:<span style="margin-left: 91px;"> <mark>Very Liberal</mark></span></p>
 
-                    <p>Favorite Music: <mark><span style="margin-left: 87px;">Beck, The Beatles, They Might Be
-                            Giants, Queen,</span><br> <span style="margin-left: 200px;"></span>Red Hot Chili
-                        Peppers, Steely Dan, Styx</span></mark></p>
+                                <p>Interests: <mark><span style="margin-left: 131px;">Film, Graphic Design, Video Editing,
+                                        Computers, </span><br><span style="margin-left: 201px;">Bowling, Dancing,
+                                        Acting, Music, Sleeping,</span><br><span style="margin-left: 201px;"></span>
+                                    Being Crazy</span></mark></p>
 
-                    <p>Favorite Movies: <mark><span style="margin-left: 78px;"> Office Space, Garden State, Eternal
-                            Sunshine of </span><br><span style="margin-left: 201px;"></span>the Spotless
-                        Mind, Triplets of Believille, Atneliee
-                        </span></mark></p>
+                                <p>Favorite Music: <mark><span style="margin-left: 87px;">Beck, The Beatles, They Might Be
+                                        Giants, Queen,</span><br> <span style="margin-left: 200px;"></span>Red Hot Chili
+                                    Peppers, Steely Dan, Styx</span></mark></p>
 
-                    <p>About Me:<span style="margin-left: 125px;"> What is there to say? I dunno. I'm a wild
-                            5'10"</span><br> <span style="margin-left: 201px;"></span>skinny-ass that wants
-                        to be
-                        creative. I like </span><br><span style="margin-left: 201px;">making movies and
-                            stuff like that.</span></p>
-                </div>
-              </div>
+                                <p>Favorite Movies: <mark><span style="margin-left: 78px;"> Office Space, Garden State, Eternal
+                                        Sunshine of </span><br><span style="margin-left: 201px;"></span>the Spotless
+                                    Mind, Triplets of Believille, Atneliee
+                                    </span></mark></p>
+
+                                <p>About Me:<span style="margin-left: 125px;"> What is there to say? I dunno. I'm a wild
+                                        5'10"</span><br> <span style="margin-left: 201px;"></span>skinny-ass that wants
+                                    to be
+                                    creative. I like </span><br><span style="margin-left: 201px;">making movies and
+                                        stuff like that.</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
             </div>
-          </aside>
-        </div>
-      </section>
+        </section>
     </div>
-  </body>
+</body>
+
 </html>
