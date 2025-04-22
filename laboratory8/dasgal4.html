@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chono tuulai</title>
+  </head>
+  <body>
+    <label>Zai (km): <input id="zaiOruulah" type="number" /></label>
+    <button onclick="tsagTootsoh()">Tootsooloh</button>
+    <p id="hariuText"></p>
+
+    <script>
+      function tsagTootsoh() {
+        const zai = parseFloat(document.getElementById("zaiOruulah").value);
+        const haritsaaniiHurd = 25 - 18; // km/tsag
+        const tsag = zai / haritsaaniiHurd;
+        const niitSekund = Math.floor(tsag * 3600);
+        const minut = Math.floor(niitSekund / 60);
+        const sekund = niitSekund % 60;
+        document.getElementById(
+          "hariuText"
+        ).textContent = `${minut} minut ${sekund} sekund`;
+      }
+    </script>
+  </body>
+</html>

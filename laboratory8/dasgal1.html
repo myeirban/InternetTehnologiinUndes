@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ner palindrom esehiig shalgah</title>
+    <script>
+      //hereglegchees ner avah
+      var ner = prompt("Ta neree oruulaarai:");
+
+      if (ner) {
+        var lowercase = ner.toLowerCase();
+        var urvuu = lowercase.split("").reverse().join("");
+
+        if (lowercase == urvuu) {
+          alert("palindrom mon bain!");
+        } else {
+          alert("palindrom bish bn.");
+        }
+      } else {
+        alert("ta yamar ch ner oruulaagui");
+      }
+    </script>
+  </head>
+  <body>
+    <p>hello!</p>
+  </body>
+</html>

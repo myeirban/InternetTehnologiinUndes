@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <label>Toot: <input id="tootOruulah" type="number" /></label>
+    <button onclick="bairshilOloh()">Oloh</button>
+    <p id="bairshilHariu"></p>
+
+    <script>
+      function bairshilOloh() {
+        const toot = parseInt(document.getElementById("tootOruulah").value);
+        const ailNegOrts = 9 * 4; // 9 davhar, davhartaa 4 ail
+        const orts = Math.ceil(toot / ailNegOrts);
+        const bairshilDotood = toot - (orts - 1) * ailNegOrts;
+        const davhar = Math.ceil(bairshilDotood / 4);
+        const haalga = ((bairshilDotood - 1) % 4) + 1;
+        document.getElementById(
+          "bairshilHariu"
+        ).textContent = `${orts}-r orts, ${davhar}-r davhar, ${haalga}-r haalga`;
+      }
+    </script>
+  </body>
+</html>
