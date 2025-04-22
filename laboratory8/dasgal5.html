@@ -1,28 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="mn">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Tegsh Sondgoy Yalgah</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+      label {
+        display: block;
+        margin-bottom: 10px;
+      }
+      button {
+        margin-top: 10px;
+      }
+      #hariuYalgal {
+        margin-top: 15px;
+        font-weight: bold;
+        color: darkblue;
+      }
+    </style>
   </head>
   <body>
-    <label>Massiv (toonuudyg taslaar bich): <input id="massivOruulah" /></label>
+    <h3>Toonuudyg tegsh sondgoyoor ni yalgaya</h3>
+    <label>
+      Toonuudyg oruulna uu (j: 1,2,3,4):
+      <input id="massivOruulah" type="text" />
+    </label>
     <button onclick="yalgahTegshSondgoy()">Yalgah</button>
-    <p id="hariuYalgal"></p>
+    <p id="hariuYalgal">End hariu garna</p>
 
     <script>
       function yalgahTegshSondgoy() {
-        const too = document
-          .getElementById("massivOruulah")
-          .value.split(",")
-          .map(Number);
-        const tegsh = too.filter((n) => n % 2 === 0);
-        const sondgoy = too.filter((n) => n % 2 !== 0);
-        document.getElementById(
-          "hariuYalgal"
-        ).textContent = `Tegsh: [${tegsh.join(", ")}], Sondgoy: [${sondgoy.join(
-          ", "
-        )}]`;
+        const orolt = document.getElementById("massivOruulah").value;
+        const toonuud = orolt.split(",").map((el) => Number(el.trim()));
+        const tegsh = [];
+        const sondgoy = [];
+
+        for (let i = 0; i < toonuud.length; i++) {
+          if (toonuud[i] % 2 === 0) {
+            tegsh.push(toonuud[i]);
+          } else {
+            sondgoy.push(toonuud[i]);
+          }
+        }
+
+        document.getElementById("hariuYalgal").textContent =
+          "Tegsh: [" +
+          tegsh.join(", ") +
+          "], Sondgoy: [" +
+          sondgoy.join(", ") +
+          "]";
       }
     </script>
   </body>
