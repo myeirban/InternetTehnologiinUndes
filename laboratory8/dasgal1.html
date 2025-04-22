@@ -1,28 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="mn">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ner palindrom esehiig shalgah</title>
-    <script>
-      //hereglegchees ner avah
-      var ner = prompt("Ta neree oruulaarai:");
-
-      if (ner) {
-        var lowercase = ner.toLowerCase();
-        var urvuu = lowercase.split("").reverse().join("");
-
-        if (lowercase == urvuu) {
-          alert("palindrom mon bain!");
-        } else {
-          alert("palindrom bish bn.");
-        }
-      } else {
-        alert("ta yamar ch ner oruulaagui");
+    <title>Palindrom shalgah</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        margin: 20px;
       }
-    </script>
+      #hariu {
+        margin-top: 20px;
+        padding: 10px;
+        border: 1px solid rgb(242, 50, 50);
+        background-color: #eaaeae;
+        border-radius: 4px;
+      }
+    </style>
   </head>
   <body>
-    <p>hello!</p>
+    <h2>Ner palindrom esehiig shalgah</h2>
+    <p id="hariu">Tanii oruulsan neriin hariu end haragdana</p>
+
+    <script>
+      // Hereglegchees ner avah
+      const ner = prompt("Ta neree oruulna uu:");
+
+      const hariu = document.getElementById("hariu");
+
+      if (ner) {
+        const nerBaga = ner.toLowerCase();
+        const urvuu = nerBaga.split("").reverse().join("");
+
+        if (nerBaga === urvuu) {
+          hariu.textContent = `"${ner}" ni palindrom MUN baina!`;
+        } else {
+          hariu.textContent = `"${ner}" ni palindrom BISH baina.`;
+        }
+      } else {
+        hariu.textContent = "Ta ner oruulaagui baina.";
+      }
+    </script>
   </body>
 </html>
