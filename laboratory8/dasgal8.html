@@ -1,93 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Зоосны тоглоом</title>
+    <title>Zoosnii togloom</title>
     <style>
       body {
-        font-family: Arial, sans-serif;
-        max-width: 600px;
-        margin: 0 auto;
-        padding: 20px;
+        font-family: sans-serif;
+        margin: 20px;
       }
-      label {
-        display: block;
-        margin-bottom: 10px;
-      }
+      input,
       button {
-        padding: 5px 15px;
-        background-color: #4caf50;
-        color: white;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
+        padding: 5px;
+        margin-top: 10px;
       }
-      #togloomHariu {
-        margin-top: 15px;
-        padding: 10px;
-        border: 1px solid #ddd;
-        border-radius: 4px;
-        background-color: #f9f9f9;
+      #hariu {
+        margin-top: 10px;
+        padding: 8px;
+        border: 1px solid rgb(241, 58, 58);
       }
-      .explanation {
+      .tailbar {
         margin-top: 20px;
         font-size: 0.9em;
-        color: #555;
+        color: rgb(151, 64, 64);
       }
     </style>
   </head>
   <body>
-    <h2>Зоосны тоглоомын бодлого</h2>
-    <label>Зоосны тоо (n): <input id="zoosToo" type="number" min="1" /></label>
-    <button onclick="petyaYalahUu()">Шалгах</button>
-    <p id="togloomHariu"></p>
-    <div class="explanation">
-      <h3>Тайлбар:</h3>
+    <h2>Zoosnii togloom</h2>
+    <label>Zoosnii too (n): <input type="number" id="n" /></label>
+    <button onclick="shalgah()">Shalgah</button>
+    <div id="hariu">Ur dun end haragdana</div>
+
+    <div class="tailbar">
       <p>
-        Зоосны тоглоомд хожих стратеги нь n-1-ийг k+1-д хуваахад үлдэгдэл 0
-        болох k утгыг олох юм. Учир нь Петя эхэлж k зоос авсны дараа хэдийд ч
-        тоглоомын төгсгөлд нэг зоос үлдээх боломжтой болдог бөгөөд тэгвэл нөгөө
-        тоглогч заавал сүүлийн зоосыг авч хожигдоно.
+        Petya ehlej togloodog. n-1 toog k+1-d huvaahad uldegdelgui bol ter k
+        zoos avaad yallaa gesen ug.
       </p>
     </div>
 
     <script>
-      function petyaYalahUu() {
-        const n = parseInt(document.getElementById("zoosToo").value);
+      function shalgah() {
+        const n = parseInt(document.getElementById("n").value);
+        const hariu = document.getElementById("hariu");
 
         if (isNaN(n) || n <= 0) {
-          document.getElementById("togloomHariu").textContent =
-            "Зоосны тоо эерэг бүхэл тоо байх ёстой!";
+          hariu.textContent = "zov too oruulna uu.";
           return;
         }
 
-        if (n === 1) {
-          document.getElementById("togloomHariu").textContent =
-            "Ялах боломжгүй";
-          return;
-        }
-
-        let bestK = 0;
-
-        for (let q = 1; q <= n - 1; q++) {
-          if ((n - 1) % q === 0) {
-            const potentialK = (n - 1) / q - 1;
-            if (potentialK >= 1) {
-              bestK = potentialK;
-              break;
-            }
+        for (let k = 1; k < n; k++) {
+          if ((n - k) % (k + 2) === 0) {
+            hariu.textContent =
+              "Petya ehendee " + k + " zoos avbal yalah bolomjtoi.";
+            return;
           }
         }
 
-        if (bestK >= 1) {
-          document.getElementById(
-            "togloomHariu"
-          ).textContent = `Петя ${bestK} зоос авбал ялна`;
-        } else {
-          document.getElementById("togloomHariu").textContent =
-            "Ялах боломжгүй";
-        }
+        hariu.textContent = "Petya yalah bolomjgui.";
       }
     </script>
   </body>
