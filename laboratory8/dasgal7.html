@@ -4,36 +4,66 @@
     <meta charset="UTF-8" />
     <title>Ogloo Oroi Durs</title>
     <style>
-      .box {
+      /* Dursnuudiin hamtarsan zagvar */
+      .durs {
         width: 50px;
         height: 50px;
         position: absolute;
         display: none;
       }
+
+      /* Ogloo durs nogoon */
+      #oglooDurs {
+        background-color: green;
+        top: 0;
+        left: 0;
+      }
+
+      /* Oroi durs ulaan */
+      #oroiDurs {
+        background-color: red;
+        bottom: 0;
+        right: 0;
+      }
+
+      /* Tailbar text */
+      #tailbar {
+        margin-top: 80px;
+        font-size: 18px;
+        color: #333;
+        font-family: Arial, sans-serif;
+      }
     </style>
   </head>
   <body>
-    <div
-      id="oglooDurs"
-      class="box"
-      style="background: green; top: 0; left: 0"
-    ></div>
-    <div
-      id="oroiDurs"
-      class="box"
-      style="background: red; bottom: 0; right: 0"
-    ></div>
+    <!-- Dursnuud -->
+    <div id="oglooDurs" class="durs"></div>
+    <div id="oroiDurs" class="durs"></div>
+
+    <!-- Tailbar garga -->
+    <p id="tailbar">Odoo tsag shalgaj baina...</p>
 
     <script>
-      alert("Odoo tsag: " + new Date().getHours());
-      // Turshilt: tsagiig garaar oruulj bolno (j: 10 bol ogloo)
-      const tsag = new Date().getHours(); // jinhene tsag
-      // const tsag = 10; // test hiih bol ene murgiig ashiglaj bolno
+      // Odoo tsagiig avna
+      const odootsag = new Date().getHours();
 
-      if (tsag >= 5 && tsag < 18) {
+      // Tsagiig alertaar haruulna
+      alert("Odoo tsag: " + odootsag);
+
+      // Ogloo 5-18 tsag hoorond
+      if (odootsag >= 5 && odootsag < 18) {
         document.getElementById("oglooDurs").style.display = "block";
-      } else if (tsag >= 18 && tsag <= 23) {
+        document.getElementById("tailbar").innerText = "Odoo ogloo baina.";
+      }
+      // Oroi 18-23 tsag hoorond
+      else if (odootsag >= 18 && odootsag <= 23) {
         document.getElementById("oroiDurs").style.display = "block";
+        document.getElementById("tailbar").innerText = "Odoo oroi baina.";
+      }
+      // Busad tsag bol shunu
+      else {
+        document.getElementById("tailbar").innerText =
+          "Odoo shunu tul durs haragduhgui.";
       }
     </script>
   </body>
