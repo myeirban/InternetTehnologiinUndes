@@ -2,51 +2,68 @@
 <html lang="mn">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Orts bairshil oloh</title>
+    <title>Ogloo Oroi Durs</title>
     <style>
-      body {
-        font-family: Arial, sans-serif;
-        padding: 20px;
+      /* Dursnuudiin hamtarsan zagvar */
+      .durs {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        display: none;
       }
-      #hariu {
-        margin-top: 15px;
-        font-weight: bold;
-        color: green;
+
+      /* Ogloo durs nogoon */
+      #oglooDurs {
+        background-color: green;
+        top: 0;
+        left: 0;
+      }
+
+      /* Oroi durs ulaan */
+      #oroiDurs {
+        background-color: red;
+        bottom: 0;
+        right: 0;
+      }
+
+      /* Tailbar text */
+      #tailbar {
+        margin-top: 80px;
+        font-size: 18px;
+        color: #333;
+        font-family: Arial, sans-serif;
       }
     </style>
   </head>
   <body>
-    <h2>Tootyn bairshil oloh</h2>
-    <label>Toot oruulna uu: <input id="tootInput" type="number" /></label>
-    <button onclick="bairshilTootsoh()">Tootsooloh</button>
-    <p id="hariu">End hariu garna</p>
+    <!-- Dursnuud -->
+    <div id="oglooDurs" class="durs"></div>
+    <div id="oroiDurs" class="durs"></div>
+
+    <!-- Tailbar garga -->
+    <p id="tailbar">Odoo tsag shalgaj baina...</p>
 
     <script>
-      function bairshilTootsoh() {
-        const toot = parseInt(document.getElementById("tootInput").value);
-        const davhar = 9;
-        const orts = 3;
-        const ail = 4;
-        const niitAil = davhar * ail * orts;
-        const hariu = document.getElementById("hariu");
+      // Odoo tsagiig avna
+      const odootsag = new Date().getHours();
 
-        if (isNaN(toot) || toot <= 0) {
-          hariu.textContent = "Zuv toot oruulna uu!";
-          return;
-        }
+      // Tsagiig alertaar haruulna
+      alert("Odoo tsag: " + odootsag);
 
-        if (toot > niitAil) {
-          hariu.textContent = "Tiim toot baihgui baina!";
-          return;
-        }
-
-        const tootIndex = toot - 1;
-        const ortsDugaar = Math.floor(tootIndex / (davhar * ail)) + 1;
-        const davharDugaar = Math.floor((tootIndex % (davhar * ail)) / ail) + 1;
-        const haalgaDugaar = (tootIndex % ail) + 1;
-
-        hariu.textContent = `Toot ${toot} ni ${ortsDugaar}-r orts, ${davharDugaar}-r davhar, ${haalgaDugaar}-r haalga baina.`;
+      // Ogloo 5-18 tsag hoorond
+      if (odootsag >= 5 && odootsag < 18) {
+        document.getElementById("oglooDurs").style.display = "block";
+        document.getElementById("tailbar").innerText = "Odoo ogloo baina.";
+      }
+      // Oroi 18-23 tsag hoorond
+      else if (odootsag >= 18 && odootsag <= 23) {
+        document.getElementById("oroiDurs").style.display = "block";
+        document.getElementById("tailbar").innerText = "Odoo oroi baina.";
+      }
+      // Busad tsag bol shunu
+      else {
+        document.getElementById("tailbar").innerText =
+          "Odoo shunu tul durs haragduhgui.";
       }
     </script>
   </body>
