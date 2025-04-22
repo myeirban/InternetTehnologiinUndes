@@ -1,18 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="mn">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Garaa ogson toonii tsifruudiin niilber</title>
-    <script>
-      let too = prompt("ta neg 2,3 tsifrtei too oruulna uu!");
-      let sum = 0;
-      let tsifruud = too.split("");
-      for (let i = 0; i < tsifruud.length; i++) {
-        sum += parseInt(tsifruud[i]);
+    <title>Tsifruudiin niilber</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
       }
-      alert("tsifruudiin niilber:" + sum);
+      #hariu {
+        margin-top: 20px;
+        font-weight: bold;
+        color: green;
+      }
+    </style>
+    <script>
+      function niilberBodoh() {
+        const too = prompt("2 esvel 3 orontoi too oruulna uu:");
+
+        // Hoorond hooson oruulsan esehiig shalgah
+        if (!too) {
+          document.getElementById("hariu").textContent =
+            "Ta too oruulaagui baina.";
+          return;
+        }
+
+        // Zuv format shalgah (zovhon 2-3 orontoi too)
+        if (!/^\d{2,3}$/.test(too)) {
+          document.getElementById("hariu").textContent =
+            "Zuvhon 2 esvel 3 orontoi eyreg too oruulna uu!";
+          return;
+        }
+
+        let niilber = 0;
+        for (let i = 0; i < too.length; i++) {
+          niilber += parseInt(too[i]);
+        }
+
+        document.getElementById("hariu").textContent =
+          "Tsifruudiin niilber: " + niilber;
+      }
+
+      // Huudas achaalagdahad avtomataar ajilluulna
+      window.onload = niilberBodoh;
     </script>
   </head>
-  <body></body>
+  <body>
+    <h2>Tsifruudiin niilber oloh</h2>
+    <p>Ta too oruulsnii daraa niilber n' door garch irne:</p>
+    <div id="hariu">Niilber haragdah heseg</div>
+  </body>
 </html>
