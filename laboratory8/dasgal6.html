@@ -1,26 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="mn">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Orts bairshil oloh</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+      #hariu {
+        margin-top: 15px;
+        font-weight: bold;
+        color: green;
+      }
+    </style>
   </head>
   <body>
-    <label>Toot: <input id="tootOruulah" type="number" /></label>
-    <button onclick="bairshilOloh()">Oloh</button>
-    <p id="bairshilHariu"></p>
+    <h2>Tootyn bairshil oloh</h2>
+    <label>Toot oruulna uu: <input id="tootInput" type="number" /></label>
+    <button onclick="bairshilTootsoh()">Tootsooloh</button>
+    <p id="hariu">End hariu garna</p>
 
     <script>
-      function bairshilOloh() {
-        const toot = parseInt(document.getElementById("tootOruulah").value);
-        const ailNegOrts = 9 * 4; // 9 davhar, davhartaa 4 ail
-        const orts = Math.ceil(toot / ailNegOrts);
-        const bairshilDotood = toot - (orts - 1) * ailNegOrts;
-        const davhar = Math.ceil(bairshilDotood / 4);
-        const haalga = ((bairshilDotood - 1) % 4) + 1;
-        document.getElementById(
-          "bairshilHariu"
-        ).textContent = `${orts}-r orts, ${davhar}-r davhar, ${haalga}-r haalga`;
+      function bairshilTootsoh() {
+        const toot = parseInt(document.getElementById("tootInput").value);
+        const davhar = 9;
+        const orts = 3;
+        const ail = 4;
+        const niitAil = davhar * ail * orts;
+        const hariu = document.getElementById("hariu");
+
+        if (isNaN(toot) || toot <= 0) {
+          hariu.textContent = "Zuv toot oruulna uu!";
+          return;
+        }
+
+        if (toot > niitAil) {
+          hariu.textContent = "Tiim toot baihgui baina!";
+          return;
+        }
+
+        const tootIndex = toot - 1;
+        const ortsDugaar = Math.floor(tootIndex / (davhar * ail)) + 1;
+        const davharDugaar = Math.floor((tootIndex % (davhar * ail)) / ail) + 1;
+        const haalgaDugaar = (tootIndex % ail) + 1;
+
+        hariu.textContent = `Toot ${toot} ni ${ortsDugaar}-r orts, ${davharDugaar}-r davhar, ${haalgaDugaar}-r haalga baina.`;
       }
     </script>
   </body>
