@@ -1,26 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="mn">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chono tuulai</title>
+    <title>Chono Tuulai</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+      #hariu {
+        margin-top: 15px;
+        font-weight: bold;
+        color: green;
+      }
+    </style>
   </head>
   <body>
-    <label>Zai (km): <input id="zaiOruulah" type="number" /></label>
-    <button onclick="tsagTootsoh()">Tootsooloh</button>
-    <p id="hariuText"></p>
+    <h2>Chono tuulaig hezee guitseh ve?</h2>
+    <label>Zai (km): <input id="zai" type="number" /></label>
+    <button onclick="tooloh()">Tootsooloh</button>
+    <p id="hariu">Ur dun end garna</p>
 
     <script>
-      function tsagTootsoh() {
-        const zai = parseFloat(document.getElementById("zaiOruulah").value);
-        const haritsaaniiHurd = 25 - 18; // km/tsag
-        const tsag = zai / haritsaaniiHurd;
-        const niitSekund = Math.floor(tsag * 3600);
-        const minut = Math.floor(niitSekund / 60);
-        const sekund = niitSekund % 60;
-        document.getElementById(
-          "hariuText"
-        ).textContent = `${minut} minut ${sekund} sekund`;
+      function tooloh() {
+        const zai = parseFloat(document.getElementById("zai").value);
+        const choniiHurdan = 25; // km/tsag
+        const tuulainiiHurdan = 18; // km/tsag
+        const ylgaa = choniiHurdan - tuulainiiHurdan;
+
+        if (isNaN(zai) || zai <= 0) {
+          document.getElementById("hariu").textContent = "Zuv zai oruulna uu.";
+          return;
+        }
+
+        const tsagN = zai / ylgaa;
+        const tsag = Math.floor(tsagN);
+        const minut = Math.floor((tsagN - tsag) * 60);
+        const sekund = Math.floor(((tsagN - tsag) * 60 - minut) * 60);
+
+        document.getElementById("hariu").textContent =
+          "Chono tuulaig " +
+          tsag +
+          " tsag " +
+          minut +
+          " minut " +
+          sekund +
+          " sekunded guitseh bolno.";
       }
     </script>
   </body>
