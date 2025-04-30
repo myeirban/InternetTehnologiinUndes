@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Минии анхны валют хөрвүүлэгч</title>
+    <style>
+      .TomDorvoljin {
+        background-color: aqua;
+        border: 1px solid;
+        padding: 50px;
+        margin-left: 500px;
+        margin-right: 450px;
+        text-align: center;
+        height: 800px;
+        border-radius: 30px;
+      }
+
+      .tooAvah {
+        height: 50px;
+        width: 400px;
+        font-size: 22px;
+        border: 2px solid;
+      }
+
+      .toonuud {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+        justify-items: center;
+        margin-top: 20px;
+      }
+
+      .toon-btn {
+        height: 50px;
+        width: 100px;
+        background-color: rgb(43, 226, 46);
+        border: none;
+        border-radius: 6px;
+        font-size: 18px;
+        cursor: pointer;
+      }
+
+      .currency-selectors {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 70px;
+        margin: 50px 0;
+      }
+
+      .swap-button {
+        padding: 8px 12px;
+        font-size: 20px;
+        background-color: #2ab03c;
+        color: rgb(198, 9, 9);
+        border: none;
+        border-radius: 40px;
+        cursor: pointer;
+      }
+
+      .swap-button:hover {
+        background-color: #ba3b89;
+      }
+
+      #result {
+        margin-top: 20px;
+        background-color: #e8f4fd;
+        padding: 15px;
+        border-radius: 10px;
+        font-size: 20px;
+        font-weight: bold;
+        display: none;
+      }
+
+      #current-rate {
+        font-size: 18px;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="TomDorvoljin">
+      <div class="JijigDorvoljin">
+        <h1>Valiut horvuulegch</h1>
+
+        <input type="text" class="tooAvah" id="screen" />
+        <br /><br />
+
+        <div class="toonuud">
+          <button class="toon-btn">1</button>
+          <button class="toon-btn">2</button>
+          <button class="toon-btn">3</button>
+          <button class="toon-btn">4</button>
+          <button class="toon-btn">5</button>
+          <button class="toon-btn">6</button>
+          <button class="toon-btn">7</button>
+          <button class="toon-btn">8</button>
+          <button class="toon-btn">9</button>
+          <button class="toon-btn">0</button>
+          <button class="toon-btn">C</button>
+          <button class="toon-btn" id="decimal">.</button>
+        </div>
+
+        <div class="currency-selectors">
+          <select id="fromCurrency">
+            <option value="USD">USD-Dollar</option>
+            <option value="MNT">MNT-Tugrug</option>
+            <option value="EUR">EUR-Euro</option>
+            <option value="YEN">YEN-Yen</option>
+            <option value="WON">WON-Von</option>
+            <option value="POUND">POUND-Funt</option>
+            <option value="YAN">YAN-yuani</option>
+          </select>
+
+          <button class="swap-button" onclick="swapCurrencies()">swap</button>
+
+          <select id="toCurrency">
+            <option value="MNT" selected>MNT-Tugrug</option>
+            <option value="USD">USD-Dollar</option>
+            <option value="EUR">EUR-Euro</option>
+            <option value="YEN">YEN-Yen</option>
+            <option value="WON">WON-Von</option>
+            <option value="POUND">POUND-Funt</option>
+            <option value="YAN">YAN-yuani</option>
+          </select>
+        </div>
+
+        <button class="swap-button" onclick="convert()">Horvuuleh</button>
+
+        <div id="current-rate"></div>
+        <div id="result">Хөрвүүлэх дүн энд харагдана</div>
+      </div>
+    </div>
+
+    <script>
+      const exchangeArray = [
+        { name: "USD", value: 1, symbol: "$", flag: "🇺🇸" },
+        { name: "EUR", value: 0.88, symbol: "€", flag: "🇪🇺" },
+        { name: "POUND", value: 0.75, symbol: "£", flag: "🇬🇧" },
+        { name: "WON", value: 1433, symbol: "₩", flag: "🇰🇷" },
+        { name: "YEN", value: 142, symbol: "¥", flag: "🇯🇵" },
+        { name: "YAN", value: 7.31, symbol: "¥", flag: "🇨🇳" },
+        { name: "MNT", value: 3537, symbol: "₮", flag: "🇲🇳" },
+      ];
+
+      window.onload = function () {
+        // Эхлээд хоосон утга байршуулах
+        document.getElementById("screen").value = "";
+        // Сонгосон талбарууд дээр туг харуулах
+        updateFlags();
+        // Ханшийн мэдээлэл шинэчлэх
+        updateExchangeRateInfo();
+      };
+
+      function appendNumber(num) {
+        const screen = document.getElementById("screen");
+        if (screen.value === "0" && num === "0") return;
+        if (screen.value === "0") {
+          screen.value = num;
+        } else {
+          screen.value += num;
+        }
+      }
+
+      function appendDecimal() {
+        const screen = document.getElementById("screen");
+        if (!screen.value.includes(".")) {
+          screen.value = screen.value === "" ? "0." : screen.value + ".";
+        }
+      }
+
+      function clearScreen() {
+        document.getElementById("screen").value = "";
+        document.getElementById("result").style.display = "none";
+      }
+
+      function removeLast() {
+        const screen = document.getElementById("screen");
+        screen.value = screen.value.slice(0, -1);
+      }
+
+      function swapCurrencies() {
+        const from = document.getElementById("fromCurrency");
+        const to = document.getElementById("toCurrency");
+        const temp = from.value;
+        from.value = to.value;
+        to.value = temp;
+
+        updateFlags();
+        updateExchangeRateInfo();
+        if (document.getElementById("screen").value !== "") convert();
+      }
+
+      function updateFlags() {
+        updateExchangeRateInfo();
+      }
+
+      function convert() {
+        const from = document.getElementById("fromCurrency").value;
+        const to = document.getElementById("toCurrency").value;
+        const amountStr = document.getElementById("screen").value;
+
+        if (!amountStr) {
+          alert("Хөрвүүлэх дүнгээ оруулна уу!");
+          return;
+        }
+
+        const amount = parseFloat(amountStr);
+        if (isNaN(amount)) {
+          alert("Зөвхөн тоо оруулна уу!");
+          return;
+        }
+
+        const fromCurrency = exchangeArray.find((c) => c.name === from);
+        const toCurrency = exchangeArray.find((c) => c.name === to);
+        const converted = (amount / fromCurrency.value) * toCurrency.value;
+
+        const resultDiv = document.getElementById("result");
+        resultDiv.style.display = "block";
+        resultDiv.textContent = `${
+          fromCurrency.flag
+        } ${amount.toLocaleString()} ${from} = ${
+          toCurrency.flag
+        } ${converted.toLocaleString(undefined, {
+          maximumFractionDigits: 2,
+        })} ${to}`;
+      }
+
+      // Тоон товчлууруудын event
+      const buttons = document.querySelectorAll(".toon-btn");
+      buttons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const value = btn.textContent;
+          if (value === "C") {
+            clearScreen();
+          } else if (value === ".") {
+            appendDecimal();
+          } else {
+            appendNumber(value);
+          }
+        });
+      });
+
+      // Цэгийн товчинд онцгой анхаарал хандуулах
+      document.getElementById("decimal").addEventListener("click", function () {
+        appendDecimal();
+      });
+
+      // Клавиатураас оруулах боломж
+      document.addEventListener("keydown", function (event) {
+        const key = event.key;
+        if (!isNaN(parseInt(key))) {
+          appendNumber(key);
+        } else if (key === "." || key === ",") {
+          appendDecimal();
+        } else if (key === "Backspace") {
+          removeLast();
+        } else if (key === "Enter") {
+          convert();
+        } else if (key === "Escape") {
+          clearScreen();
+        }
+      });
+    </script>
+  </body>
+</html>
