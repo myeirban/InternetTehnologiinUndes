@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hangman</title>
+    <link rel="stylesheet" href="my.css" />
+  </head>
+  <body>
+    <div id="Nuur_huudas">
+      <h1>Hangman togloom</h1>
+      <h2>Togloomond tavtai moril!</h2>
+
+      <input type="text" id="nickname" placeholder="neree oruulna uu" />
+      <button id="start-game" onclick="togloom_ehluuleh()">Start</button>
+    </div>
+
+    <div id="togloomiin-undsen-heseg">
+      <div class="tolgoi-heseg">
+        <div id="toglogchiin_ner"></div>
+        <div id="toglogchiin_onoo"></div>
+        <div class="timer"><span id="uldsen_hugatsaa"></span></div>
+      </div>
+      <div id="hun-zurah-heseg">
+        <svg height="250" width="250" class="hangman">
+          <!--hun duujleh mod-->
+          <line
+            x1="50"
+            y1="20"
+            x2="50"
+            y2="230"
+            stroke="#333"
+            stroke-width="6"
+          />
+          <line
+            x1="50"
+            y1="20"
+            x2="130"
+            y2="20"
+            stroke="#333"
+            stroke-width="6"
+          />
+          <line
+            x1="130"
+            y1="20"
+            x2="130"
+            y2="50"
+            stroke="#333"
+            stroke-width="6"
+          />
+          <line
+            x1="20"
+            y1="230"
+            x2="80"
+            y2="230"
+            stroke="#333"
+            stroke-width="6"
+          />
+          <!--hun zursan heseg-->
+          <circle
+            id="tolgoi"
+            cx="130"
+            cy="70"
+            r="20"
+            stroke="#333"
+            stroke-width="3"
+            fill="transparent"
+            class="hidden"
+          />
+          <line
+            id="body"
+            x1="130"
+            y1="90"
+            x2="130"
+            y2="150"
+            stroke="#333"
+            stroke-width="3"
+            class="hidden"
+          />
+          <line
+            id="left-arm"
+            x1="130"
+            y1="110"
+            x2="100"
+            y2="130"
+            stroke="#333"
+            stroke-width="3"
+            class="hidden"
+          />
+          <line
+            id="right-arm"
+            x1="130"
+            y1="110"
+            x2="160"
+            y2="130"
+            stroke="#333"
+            stroke-width="3"
+            class="hidden"
+          />
+          <line
+            id="left-leg"
+            x1="130"
+            y1="150"
+            x2="100"
+            y2="190"
+            stroke="#333"
+            stroke-width="3"
+            class="hidden"
+          />
+          <line
+            id="right-leg"
+            x1="130"
+            y1="150"
+            x2="160"
+            y2="190"
+            stroke="#333"
+            stroke-width="3"
+            class="hidden"
+          />
+        </svg>
+      </div>
+      <div id="ug-taahad-tusaldag-heseg">
+        <p id="hint">taah ug:</p>
+      </div>
+      <div id="taah_ugnii_heseg" class="taah_ugnii_heseg"></div>
+      <div id="keyboard" class="keyboard"></div>
+      <button id="show-leaderboard-game" class="leaderboard-btn">
+        shildeg toglogchid
+      </button>
+    </div>
+
+    <div id="game-over-heseg">
+      <h2>Тоглоом дууслаа!</h2>
+      <p id="final-score"></p>
+      <p id="high-score-message" class="hidden">
+        Баяр хүргэе! Та шилдэг 5 тоглогчийн нэгд орлоо!
+      </p>
+      <button id="dahin_togloh">Дахин тоглох</button>
+      <button id="show-leaderboard-over">Шилдэг тоглогчид</button>
+    </div>
+
+    <!-- Leaderboard хэсэг -->
+    <div id="leaderboard-heseg" class="container hidden">
+      <h2>Шилдэг 10 тоглогч</h2>
+      <div id="leaderboard"></div>
+      <button id="back-to-game">Буцах</button>
+    </div>
+    <!-- Нэмэх хэсэг -->
+    <div id="alert-box" class="hidden"></div>
+
+    <script src="words.js"></script>
+    <script src="myscript.js"></script>
+  </body>
+</html>
