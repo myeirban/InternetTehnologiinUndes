@@ -1,4 +1,3 @@
-/* 🌟 Ерөнхий тохиргоо */
 body {
   font-family: Arial, sans-serif;
   background: linear-gradient(to right, #e3f2fd, #ffffff);
@@ -14,7 +13,7 @@ h2 {
   margin-top: 20px;
 }
 
-/* 👤 Нэр оруулах хэсэг */
+
 #nickname {
   padding: 10px;
   font-size: 16px;
@@ -22,7 +21,7 @@ h2 {
   width: 220px;
 }
 
-/* ▶️ Эхлэх товч */
+
 #start-game {
   background: #fff176;
   border: 1px solid #fbc02d;
@@ -38,7 +37,6 @@ h2 {
   background-color: #fdd835;
 }
 
-/* 🧩 Үндсэн хэсгүүд нуух */
 #togloomiin-undsen-heseg,
 #game-over-heseg,
 #leaderboard-heseg {
@@ -46,7 +44,6 @@ h2 {
   margin-top: 20px;
 }
 
-/* 🪢 Дүүжлүүр хэсэг */
 .hangman {
   background: #ddd;
   border-radius: 5px;
@@ -55,7 +52,6 @@ h2 {
   display: block;
 }
 
-/* 🔤 Үсэг таах хайрцаг */
 .letter-box {
   display: inline-block;
   width: 40px;
@@ -75,12 +71,10 @@ h2 {
   margin-top: 20px;
 }
 
-/* ⛔ Дуудагдаагүй SVG хэсгүүд нуух */
 .hidden {
   display: none !important;
 }
 
-/* 🎹 Гар (keyboard) */
 #keyboard {
   display: flex;
   flex-direction: column;
@@ -117,7 +111,6 @@ h2 {
   cursor: not-allowed;
 }
 
-/* ⏱ Таймер */
 .timer {
   font-size: 18px;
   font-weight: bold;
@@ -125,12 +118,12 @@ h2 {
   margin-top: 10px;
 }
 
-/* 🏁 Тоглоом дууссан */
+
 #game-over-heseg h2 {
   color: #d32f2f;
 }
 
-/* 🏆 Шилдэг тоглогчдын жагсаалт */
+
 #leaderboard {
   margin-top: 12px;
   font-size: 16px;
@@ -144,7 +137,6 @@ h2 {
   text-align: left;
 }
 
-/* ⚠️ Анхааруулга */
 #alert-box {
   background: #fff3cd;
   border: 1px solid #999;
@@ -159,7 +151,6 @@ h2 {
   z-index: 1000;
 }
 
-/* 🧷 Ерөнхий товчлуурууд */
 button {
   font-family: inherit;
   font-size: 16px;
@@ -181,7 +172,6 @@ button:active {
   transform: scale(0.98);
 }
 
-/* 👑 Шилдэг тоглогч товч */
 .leaderboard-btn {
   background-color: #2196f3;
 }
