@@ -1,13 +1,10 @@
-// 🎯 Hangman тоглоомын бүрэн ажиллагаатай, оюутны хэв маягтай хувилбар
-
 let correctLetters = [];
 let wrongGuesses = 0;
 let maxWrong = 6;
 let score = 0;
 let taahUg = "";
-let tsag = null; // Глобал таймер хувьсагч
+let tsag = null; 
 
-// 🍪 Cookie хадгалах функцүүд
 function setCookie(name, value, days) {
   const d = new Date();
   d.setTime(d.getTime() + days * 24 * 60 * 60 * 1000);
@@ -26,7 +23,7 @@ function getCookie(name) {
   return null;
 }
 
-// 🕹️ Тоглоом эхлүүлэх (nicknameFromCookie true бол өмнөх cookie-г ашиглана)
+
 function togloom_ehluuleh(nicknameFromCookie = null) {
   let nickname;
   if (nicknameFromCookie) {
@@ -68,7 +65,6 @@ function togloom_ehluuleh(nicknameFromCookie = null) {
   ehlehShineUg();
 }
 
-// 🔤 Үсэг дарахад дуудагдана
 function taahUseg(letter, btn) {
   if (btn.disabled) return;
   btn.disabled = true;
@@ -102,7 +98,6 @@ function taahUseg(letter, btn) {
   }
 }
 
-// 🆕 Шинэ үг эхлүүлэх функц
 function ehlehShineUg() {
   wrongGuesses = 0;
   const random = words[Math.floor(Math.random() * words.length)];
@@ -121,7 +116,6 @@ function ehlehShineUg() {
   const keyboard = document.getElementById("keyboard");
   keyboard.innerHTML = "";
 
-  // ✅ Монгол цагаан толгойн keyboard layout (35 үсэг)
   const keyboardRows = [
     ["ф", "ц", "у", "ж", "э", "н", "г", "ш", "щ", "з", "к", "ъ", "ү"],
     ["й", "ы", "б", "ө", "а", "х", "р", "о", "л", "д", "п", "е"],
@@ -194,7 +188,7 @@ function saveToLeaderboard(nickname, score) {
   }
 }
 
-// 🎯 Leaderboard харах товч
+
 
 document
   .getElementById("show-leaderboard-game")
@@ -221,7 +215,6 @@ function showLeaderboard() {
   });
 }
 
-// 🔁 Дахин тоглох, буцах товч
 
 document.getElementById("back-to-game").addEventListener("click", () => {
   document.getElementById("leaderboard-heseg").style.display = "none";
@@ -238,7 +231,6 @@ document.getElementById("dahin_togloh").addEventListener("click", () => {
   }
 });
 
-// ⚠️ Зөөлөн анхааруулга үзүүлэх функц
 function showAlert(msg, duration = 2000) {
   const alertBox = document.getElementById("alert-box");
   alertBox.textContent = msg;
