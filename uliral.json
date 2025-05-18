@@ -1,102 +1,223 @@
 {
   "1": {
     "question": "Интернэт гэж юу вэ?",
-    "answer": "Дэлхий даяар тархсан сүлжээний сүлжээ бөгөөд компьютерууд харилцан мэдээлэл солилцох боломжтой.",
-    "explanation": "Интернэт нь олон төрлийн протоколууд ашиглан төхөөрөмжүүдийг холбож өгдөг дэд бүтэц юм."
+    "answer": "Internet gedeg ni medeelliig huvaan ashiglah/damjuulah TCP/IP protokol ashigladag heden say computer bolon tohooromjuudiig holboson fizik suljee yum.",
+    "explanation": "Internet ni heden say computer bolon tohooromjuudiig holboson fizik suljee yum bn,."
   },
   "2": {
     "question": "WWW (World Wide Web) гэж юу вэ?",
-    "answer": "Интернэтийн дээр ажилладаг мэдээлэл түгээх систем.",
-    "explanation": "WWW нь вэб хуудаснуудыг HTML хэлбэрээр дамжуулж, hyperlink ашиглан холбодог."
+    "answer": "HTTP,HTTPS zereg protokoluudiig ashiglan handah bolomjtoi,Interneted bairlasan hoorondoo dotood holboo buhii multimedia barimtuudiin tsugluulgiig WWW gene.",
+    "explanation": "HTTP,HTPPS zereg protokoluudiig ashiglan handah bolomjtoi,Interneted bairlasan multmedia barimtuudiin tsugluulgiig WWW gene."
   },
   "3": {
     "question": "Интернэт ба WWW-ийн ялгааг тайлбарла.",
-    "answer": "Интернэт бол сүлжээ, WWW бол түүн дээр ажилладаг үйлчилгээ.",
-    "explanation": "Интернэт нь үндсэн дэд бүтэц бол WWW нь хэрэглэгчид вэб хуудас үзэх боломж олгодог систем."
+    "answer": "Интернэт bol fizik suljee, WWW бол түүн дээр ажилладаг үйлчилгээ.ene bol veb huudsuudiin tsugluulga,edgeeriig harahiin tuld bid chrome iig ashigladag.",
+    "explanation": "Internet bol avto zamin suljee gevel,WWW ni ene zamaar yavj baigaa mashin."
   },
   "4": {
     "question": "URI ба URL хоёрын ялгаа юунд оршдог вэ?",
-    "answer": "URL бол URI-ийн нэг төрөл.",
-    "explanation": "URI нь нөөцийн тодорхойлолт бол URL нь тухайн нөөцийн байршлыг заана."
+    "answer": "URL gedeg ni Uniform Resource Locator buyu bairshliig zaadag.Web deerh noots(Web huudas,zurag) haana baigaa ve gedgiig heldeg.Yern bol tuhain veb huudsiig haanaas olj bolohiig zaadag.Harin URI ni eronhii oilgolt.URL,URN hoyul URI-d orno.",
+    "explanation": "URI ni huntei uulzahiin tuld ene hunii ner bat gej heleh,harin URL ni bat ni 5 horoo,12 r bairand amdardag gej helehtei adilhan."
   },
   "5": {
     "question": "HTTP ба HTTPS протоколын гол ялгаа юу вэ?",
-    "answer": "HTTPS нь шифрлэлттэй, HTTP нь шифрлэлгүй.",
-    "explanation": "HTTPS нь SSL/TLS ашиглаж өгөгдлийг хамгаалдаг."
+    "answer": "HTTPS нь шифрлэлттэй, HTTP нь шифрлэлгүй.HTTP d ogogdol neelttei baidlaar yavdag,tiimees hakeruud medeelliig unshij,oorcilj boldog.HTTPS ni ogogdliig shifrlej yavuldag tul hakeruudaas hamgaalagdsan baidag.Hervee web sait http protokoliig ashiglabal brauzer tuhain saitiig not secure gej temdegledeg.HTTPS ni secure bolohoo GOOGLE iin SEO sistemd iluu ondor unelgee avdag.",
+    "explanation": "HTTP bol hunii garaar bichsen ug.Harin HTTPS ni tusgai nuutslaltai kodig ashiglan bicsen ug."
   },
   "6": {
     "question": "ARPANET төсөл ямар байгууллагаар санхүүжигдсэн бэ? Анхны холболт хаана хийгдсэн бэ?",
-    "answer": "АНУ-ын Батлан хамгаалахын DARPA байгууллага.",
+    "answer": "АНУ-ын toriin Батлан hamgaalah yamiin ARPA baiguullagaar sanhuujigdsen.Anhni holbolt ni 1969 ond ANU iin UCLA,SRI hoorondiin computeruud medeelel damjuulan holbogdoj baiv.Ene holbolt ni global suljee baiguulah sanaag heregjuuleh ehlel bolson yum.",
     "explanation": "Анхны холболт 1969 онд Калифорнийн их сургууль ба Стэнфордын хооронд хийгдсэн."
   },
   "7": {
     "question": "Интернэтийн түүхэн хөгжлийн үе шатуудыг нэрлэ.",
-    "answer": "ARPANET, NSFNET, WWW үүсэл, интернетийн өргөжилт.",
-    "explanation": "Сүлжээний сүлжээ → академик сүлжээ → олон нийтийн интернет гэсэн үе шаттай хөгжсөн."
+    "answer": "ARPANET ni internetiin urdcilsan huvilbar baisan,1983 ond TCP/IP protokol in nevtruulelt ni internet iin undsen protokol bolsnoor suljeenii hariltsaa iluu orgon bolson.Ene yed ARPANET buheldee Internet bolson , WWW,HTML iig 1991 ond Tim Berners Lee taniltsuulsnaar Internetiin herglee ers nemegdsen, интернет 2.0 buyu web 2.0,web 3.0 bolon hiimel oyun uhaan,5g Suljee,Kvant computer.",
+    "explanation": "ARPANET → WWW,HTML → Internet 2.0 ba social media -> Web 3.0."
   },
   "8": {
     "question": "Tim Berners-Lee вэбт ямар хувь нэмэр оруулсан бэ?",
-    "answer": "WWW-ийг зохион бүтээсэн.",
-    "explanation": "Тэрбээр HTML, HTTP, вэб хөтөч, серверийн эхлэлүүдийг боловсруулсан."
+    "answer": "1990 ond WWW-ийг зохион бүтээсэн.HTML heliig zohioson.URI sistemiig zohioson,http protokoliig zohioson.URL haygiig standartchilsan.",
+    "explanation": "Internetiig hereglegchded hurteemjtei,iluu hylbar bolgohiin zeregtsee delhiin neelttei suljeeg bii bolgoson."
   },
   "9": {
     "question": "HTML ба HTTP хэлийг анх хэн, ямар зорилгоор зохиосон бэ?",
-    "answer": "Tim Berners-Lee мэдээллийг холбож түгээх зорилгоор зохиосон.",
-    "explanation": "HTML нь вэб хуудас үүсгэх, HTTP нь вэб сервертэй холбогдох зорилготой."
+    "answer": "Tim Berners-Lee мэдээллийг холбож түгээх зорилгоор зохиосон.Ene ni heliig web huudasnii aguulgiig butetsteigeer todorhoilj,tuhain aguulga hoorondiin holboosuudiig uusgeh yavdal bsn.HTTP protokol ni web server bolon web hotochiin hoorond medeelel damjuulah standart protokol yum",
+    "explanation": "HTML нь вэб хуудас үүсгэх, HTTP нь вэб сервертэй холбогдох зорилготой protokol yum.Bas uusgesen huudasuud ruu holbogdoh protokol yum"
   },
   "10": {
     "question": "HTTP протоколын ямар үндсэн командууд байдаг вэ?",
-    "answer": "GET, POST, PUT, DELETE, HEAD гэх мэт.",
-    "explanation": "Эдгээр нь серверээс мэдээлэл авах, илгээх, шинэчлэх, устгах үйлдэлд хэрэглэгдэнэ."
+    "answer": "GET, POST, PUT, DELETE, PATCH,HEAD,OPTIONS,TRACE гэх мэт.",
+    "explanation": "Эдгээр нь серверээс мэдээлэл авах, илгээх, шинэчлэх, устгах,hesegchilen shinecleh,serverees ogogdliig avah,yamar torliin HTTP komanduudiig demjdeg bolohiig asuuh,server ilgeesen huseltiig mordoh үйлдэлд хэрэглэгдэнэ."
   },
   "11": {
     "question": "HTTP request ба response-ийн бүтэц хэрхэн зохион байгуулагдсан байдаг вэ?",
-    "answer": "Header, body хэсгүүдтэй.",
-    "explanation": "Request нь method, URL, headers, body; Response нь status code, headers, body багтаадаг."
+    "answer": "HTTP request ni request line,headers,blank line,body gesen hesguudtei.HTTP response ni status line,headers,blank line,body gesen hesgtei",
+    "explanation": "Request нь serverees yamar neg ni yum husej bn.Server hereglegchid hariu ogch bn,aldaatai bol 404.Status code serveriin hariug ilerhiildeg too,jishee ni 200 OK,404 not found.BODy ni html,json gesen jinhene ogogdol. "
   },
   "12": {
     "question": "IP хаяг гэж юу вэ? Жишээ бичнэ үү.",
-    "answer": "Сүлжээнд төхөөрөмжийг таних дугаар.",
-    "explanation": "IPv4 жишээ: 192.168.0.1, IPv6 жишээ: 2001:0db8:85a3::8a2e:0370:7334."
+    "answer": "Internet protocol address gedeg ni tohooromjiin internet deerh hayag yum.IP hayag yag geriin hayag shig tani haana baigaag olj harilitsahad hereglegdene. 8.8.8.8 ene bol google iin dns serveriin hayag yum. ",
+    "explanation": "IPv4 жишээ: 192.168.0.1, IPv6 жишээ: 2001:0db8:85a3::8a2e:0370:7334 ene ni iluu olon tohooromjid hayag ogoh zoriulalttai."
   },
   "13": {
     "question": "TCP ба портын үүрэг, хэрэглээний жишээг тайлбарла.",
-    "answer": "TCP найдвартай холболт үүсгэнэ, порт нь үйлчилгээ танина.",
-    "explanation": "Жишээ нь: HTTP үйлчилгээ 80-р порт дээр TCP ашиглана."
+    "answer": "Tranmission control protocol ni internet dehi ogogdliig naidvartai damjuulah zoriulalttai protocol yum,ene ni ogogdliig heseg hesgeer yavuuldag.Port gedeg ni neg computer deer olon uilcilgeeg yalgaj tanih temdeg yum.TCP/IP protokoluud ni IP hayag portin dugaar ashiglan tohooromj bolon uilcilgeeg tanidag.IP hayag bol geriin hayag.Port ni geriin haygiin dugaar yum.",
+    "explanation": "Жишээ нь: web sait ruu handah.IP hayag ni 142.250.190.14 ,port ni 80 ,protokol TCP.Web hotoch TCP holboltoor google servertei port 80 deer holbogdoj,hariu avdag."
   },
   "14": {
     "question": "Domain Name System (DNS) хэрхэн ажилладаг вэ?",
-    "answer": "Домэйн нэрийг IP хаяг руу хөрвүүлдэг.",
-    "explanation": "Жишээ: google.com → 142.250.190.78 гэх мэт IP хаяг руу хөрвүүлдэг систем."
+    "answer": "Ene ni bidnii ashiglaj zanshsan google gesen ner yum.Ene to hotchod google.com gej bicihed tani computer ehleed ene domeinii IP hayag gej yu ve gej asuudag.Ehleed omno ene domainii ip hadgalagdsan  esehiig shalgadag.Daraa oldoogui bol DNS resolver server ruu ip hayigiig olj og geed huselt yavuuldag.DNS resolver ehleeed Root DNS server ruu ochno.Root server zovhon .com gedeg zuiluudiig meddeg. tegeed tegj yavj baigaad DNS resolver IP haygiig hereglegchiin computert butsaaj ogdog",
+    "explanation": "Tand neg naiziin chin ner baigaa ch utasnii dugaariig medehgui gej bodyo.Ta tuunii neriig contactsaas haij dugaariig olj duudlaga hiideg.DNS yag contact shig ajilladag hereglegch website iin neriig bicvel DNS tuunii neriin tsaadah IP haygiig olj ogdog."
   },
   "15": {
     "question": "Орчин үеийн хамгийн түгээмэл вэб хөтчүүдийг нэрлэ. Аль нь хамгийн их хэрэглэгддэг вэ?",
-    "answer": "Chrome, Firefox, Edge, Safari.",
+    "answer": "Chrome, Firefox, Edge, Safari,Opera.",
     "explanation": "Chrome нь дэлхий даяар хамгийн өргөн хэрэглэгддэг вэб хөтөч юм."
   },
   "16": {
     "question": "Вэб хөтөч хэрхэн вэб хуудсыг дуудаж харуулдаг вэ?",
-    "answer": "URL оруулан HTTP request илгээнэ, серверээс HTML хариу авч үзүүлнэ.",
+    "answer": "Ta www.example.com gej biclee.Hotoch tani ip hayag ruu horvuulehiin tuld DNS ashiglana.IP hayag oldsonii daraa hotoch ni web server ruu HTTP esvel HTTPS huselt ilgeedeg.Server ni hussen html file-iig butsaaj ogno.Parsing buyu HTML iig zadlan unshij css iig hereglej haragdah baidlig todorhoilno.Javascript kodiig ajilluulj huudasnii uildluudiig idevhjuulne.Etsest ni hotoch DOM gedeg butets uusgeed,hereglegchid huudsiig zurgan baidlaar haruulna.",
     "explanation": "DNS-р IP-г олно → HTTP-р холбогдоно → HTML татаж авна → хуудас болгон үзүүлнэ."
   },
   "17": {
     "question": "Вэб 1.0, Вэб 2.0, Вэб 3.0-ийн ялгаа болон хөгжил хэрхэн өрнөсөн бэ?",
-    "answer": "Вэб 1.0 статик, 2.0 интерактив, 3.0 ухаалаг вэб.",
-    "explanation": "Вэб 1.0: уншдаг, Вэб 2.0: харилцдаг, Вэб 3.0: AI, блокчэйн ашигладаг."
+    "answer": "web 1.0 zovhon unsh ye (1990-2004) Web huudsuud zovhon medeelel uzuuldeg,hereglegchiin oroltsoo baihgui.Web 2.0 Unsh + bich ye (2004 oos odoog hurtel)Hereglegch aguulga uusgej,hariltsan medeelel soliltsono.WEb 3.0 Unsh + bich +ezemsh ye (2018 osoj bui)Blockchain ,AI ,deed tovshnii ogogdol holbolt ashiglana.",
+    "explanation": "Вэб 1.0: уншдаг,zovhon unshih bolomjtoi, Вэб 2.0: харилцдаг,ta facebook deer bicleg hiine,like darna,post hiine. Вэб 3.0: AI, блокчэйн ашигладаг,ta ooroo ogogdoldoo ezen baina."
   },
   "18": {
     "question": "Семантик вэб гэж юу вэ? Түүний гол зорилго юу вэ?",
-    "answer": "Мэдээллийг утгатай ойлгуулах вэб.",
-    "explanation": "Машинууд өгөгдлийн утгыг ойлгож, илүү ухаалаг үйлчилгээ үзүүлэх боломжтой болно."
+    "answer": "Ene ni web deerh ogogdliig utga aguulgatai,mashind oilgogdohuits helbert oruulah sanaa yum.Ingesneer webiig zovhon haragdats bish,oilgolttoi bolgono.",
+    "explanation": "Машинууд өгөгдлийн утгыг ойлгож, илүү ухаалаг үйлчилгээ үзүүлэх боломжтой болно.Einstein bol fizikch gej text bicsen bol tuuniig semantik web uuniig Subiekt: Einstein,Ogogdol : mergejil, Utga: Fizikch gej mashin oilgoj chadah helbert oruulna."
   },
   "19": {
     "question": "Вэб 3.0-тэй холбоотойгоор хиймэл оюун ухаан вэб сайтуудад хэрхэн нөлөөлөх вэ?",
-    "answer": "Контентийг илүү оновчтой, хувь хүнд тохируулан үзүүлдэг.",
-    "explanation": "AI нь хэрэглэгчийн зан төлөв, утгыг ойлгож зөв мэдээлэл санал болгоход тусална."
+    "answer": "WEb 3.0 iin hamgiin gol ontslog ni uhaalag,ogogdol oilgoj bolovsruuldag,tovlorson bus baih.Uuniig bolovsruulahad hiimel oyun uhaan zailshgui shaardlagatai bogood AI ni webiig huvsah chadvartai,hereglegchiin tovtei ,avtonamit bolgohod chuhal noloo uzuuldeg.",
+    "explanation": "AI ni ih hemjeenii ogogdliig gunzgii bolovsruulj,web saitiin shiidver gargalt,aguulgiin udirdlagiig iluu ur duntei bolgono."
   },
   "20": {
     "question": "Жишээгээр тайлбарла: http://seas.num.edu.mn/index.html энэ URL ямар бүтэцтэй вэ?",
-    "answer": "Протокол: http, Домэйн: seas.num.edu.mn, Файл: index.html.",
-    "explanation": "http:// – протокол; seas.num.edu.mn – серверийн хаяг; index.html – хуудасны файл."
+    "answer": "Протокол: http, Домэйн ner: seas.num.edu.mn, Файл,zam: index.html.",
+    "explanation": "Hotoch ni http protokol ashiglan seas.num.edu.mn gedeg servertei holbogdoj tend baigaa index.html huudsiig tataj avch,tand haruulj bn."
+  },
+  "21": {
+    "question": "HTML гэж юу вэ? Ямар зориулалттай хэл вэ?",
+    "answer": "HTML (Hypertext markup language) ni web huudsiig buteehed hereglegddeg temdeglegeet hel yum.Ene web hotchid tuhain medeelliig yaj haruulah ve gedgiig zaadag",
+    "explanation": "Ene web huudsiin butsiig uusgehed hereglegdeh hel yum.Uuniig ashiglaj css bicdeg."
+  },
+  "22": {
+    "question": "HTML баримтын бүтэц хэрхэн харагддаг вэ? Анхны жишээ код тайлбарла.",
+    "answer": "<!DOCTYPE html> – HTML5 баримт гэдгийг заана.<html> – бүхэл бүтэн вэб хуудасны үндсэн блок.<head> – хуудсын гарчиг, мета мэдээлэл орно.<title> – хөтөчийн tab дээрх нэр.<body> – хэрэглэгчид харагдах контент.",
+    "explanation": "Html deer bicij baigaa buh kod <html> gesen tagiin dotor baidag.Daraa head tag,body tag ordog.head ni hotchiin tab deer ner bol body tagd hereglegchiin haragdah heseg haragddag."
+  },
+  "23": {
+    "question": "DOCTYPE гэж юу вэ? HTML5-д ямар утгатай бичдэг вэ?",
+    "answer": "<!DOCTYPE html> ni tuhain HTML barimt HTML5 standartaar bicigdsen gedgiig web hotochid helj ogdog mor yum",
+    "explanation": "Ihenhdee hamgiin ehend haragddag."
+  },
+  "24": {
+    "question": "Tag гэж юу вэ? Tag-уудын төрлүүд (нээдэг, хаадаг, өөрийгөө хаадаг) жишээгээр тайлбарла.",
+    "answer": "Tag нь HTML-ийн үндсэн нэгж. Элементүүдийг зааж өгдөг. Жишээ:1).Нээдэг ба хаадаг tag: <p>Сайн уу</p> 2)Өөрийгөө хаадаг tag: <br/>, <img />",
+    "explanation": "SVG eer hangman zurgiig zurahdaa line tag ashiglasan.<h1></h1> gesen haadag taguud baidag."
+  },
+  "25": {
+    "question": "Nesting гэж юу вэ? Зөв болон буруу оруулсан tag-ийн жишээ.",
+    "answer": "Нэг tag дотор өөр tag оруулахыг nesting гэдэг.Зөв:<b><i>Bold and italic</i></b>  Буруу:<b><i>Bold and italic</b></i>",
+    "explanation": "bidend ihenhdee hoyor tagiig zereg ashiglagdaj baidag gehdee nestng gej meddeggui yum."
+  },
+  "26": {
+    "question": "Common элементүүдийн зориулалт: <title>, <p>, <br/>, <b>, <i>, <pre>, <strong>, <em>, <sub>, <sup>, <big>, <small>",
+    "answer": "<title>Tab дээрх гарчиг,<p>Параграф буюу догол мөр,<br/>Шинэ мөр үүсгэнэ,<b>Bold үсэг,<i>Italic буюу налуу,<pre>Format-ыг хэвээр хадгална,<strong>Чухалчилж,тод болгоно,<em>Онцолж харуулна(emphasis),<sub>Dooguur индекс(H<sub>2</sub>O),<sup>Дээрх индекс(x<sup>2</sup>)-x iin kvadrat,<big>Том үсэг,<small>Жижиг үсэг",
+    "explanation": "title tag deer minii website gej bichne,Oguulberiig p tag deer oguulber,Pre tag moriin zai,helber hadgalagdana.em ni txtiig ontslon haruulna,pre ni hlberiig heveer haruulna."
+  },
+  "27": {
+    "question": "Meta tag-ийн үүрэг, name ба content attribute-ийн хэрэглээ.",
+    "answer": "Мета tag нь хуудсыг тайлбарлах, хайлтын системд мэдээлэл өгөхөд хэрэглэгддэг.",
+    "explanation": "<meta name=author content=Jadira Bilim>,<meta name=description content=HTML хичээлийн хуудас>"
+  },
+  "28": {
+    "question": "HTML баталгаажуулах хэрэгсэл гэж юу вэ? Ямар сайт дээр ажилладаг вэ?",
+    "answer": "HTML batalgaajuulagch ni tani HTML kodiig standartad niitsej baigaa esehiig shalgadag heregsel yum",
+    "explanation": "Ene ni sintaks aldaa,huuchin esvel huchingui elementuud,DOCTYPE buruu ashiglasan zereg aldaanuudiig ilruulj ogdog."
+  },
+  "29": {
+    "question": "HTML-д текстийг хэрхэн форматладаг вэ? Текстийн layout жишээ үзүүл.",
+    "answer": "<p>Энэ бол <b>тод</b> бичвэр. <i>Энэ налуу</i>.</p>;&nbsp;, &lt;, &gt; зэрэг нь escape тэмдэгт. Жишээ:<p>Хэрвээ x &lt; 10 бол ...</p>",
+    "explanation": ""
+  },
+  "30": {
+    "question": "Тусгай тэмдэгтүүд гэж юу вэ? <, >, © гэх мэт.",
+    "answer": "",
+    "explanation": ""
+  },
+  "31": {
+    "question": "Hyperlink буюу холбоос үүсгэх синтакс? href атрибутын үүрэг.",
+    "answer": "<a href=https://num.edu.mn>NUM</a>",
+    "explanation": ""
+  },
+  "32": {
+    "question": "Вэб хуудасны доторхи холбоос (internal link) хэрхэн хийдэг вэ? name ашиглах жишээгээр.",
+    "answer": "<a href=#about>Миний тухай</a>;...<h2 id=about>Миний тухай хэсэг</h2>",
+    "explanation": ""
+  },
+  "33": {
+    "question": "Email холбоос үүсгэх синтакс?",
+    "answer": "",
+    "explanation": ""
+  },
+  "34": {
+    "question": "HTML-д зураг оруулах синтакс. src, alt атрибутуудын үүрэг.",
+    "answer": "<img src=zurag.jpg alt=Миний зураг>;src – зураг хаана байгааг заана.;alt – зураг ачаалагдаагүй тохиолдолд бичигдэнэ.",
+    "explanation": ""
+  },
+  "35": {
+    "question": "Зургийн төрөл ба онцлог: GIF, JPEG, PNG",
+    "answer": "GIF-256 өнгө, энгийн зураг;JPEG-Фото зураг, олон өнгө;PNG-Илүү чанартай, ил тод дэвсгэр дэмждэг",
+    "explanation": ""
+  },
+  "36": {
+    "question": "Зургийг холбоос болгох арга.",
+    "answer": "<a href=https://google.com> <img src=logo.png alt=Logo> </a>",
+    "explanation": ""
+  },
+  "37": {
+    "question": "Absolute ба relative замын ялгаа, жишээ.",
+    "answer": "Absolute: бүрэн URL эсвэл зам-https://example.com/image.png,Relative: тухайн HTML-ээс харьцангуй-../img/photo.jpg",
+    "explanation": ""
+  },
+  "38": {
+    "question": "Эрэмбэлэгдсэн болон эрэмбэлэгдээгүй жагсаалтын бүтэц.",
+    "answer": "Эрэмбэлэгдээгүй (unordered):<ul> <li>Нэг</li> <li>Хоёр</li></ul>;Эрэмбэлэгдсэн (ordered):<ol><li>Нэг</li><li>Хоёр</li> </ol>",
+    "explanation": ""
+  },
+  "39": {
+    "question": "type атрибутын хэрэглээ — ямар утгууд авдаг вэ?",
+    "answer": "<ol type=A> <!-- A, a, I, i, 1 --> <li>Нэг</li> </ol> ",
+    "explanation": ""
+  },
+  "40": {
+    "question": "Үүрэлсэн (nested) жагсаалт хэрхэн хийдэг вэ?",
+    "answer": "<ul> <li>Жимс <ul> <li>Алим</li> <li>Банана</li> </ul> </li> </ul>",
+    "explanation": ""
+  },
+   "41": {
+    "question": "Хүснэгт бүтээх үндсэн элементүүд (<table>, <tr>, <td>, <th>).",
+    "answer": "<table border=1> <tr> <th>Нэр</th> <th>Нас</th> </tr> <tr> <td>Болд</td> <td>20</td></tr></table>",
+    "explanation": ""
+  },
+   "42": {
+    "question": "Мөр багана нэгтгэх синтакс (rowspan, colspan).",
+    "answer": "<td colspan=2>2 багана нэгтгэв</td> <td rowspan=2>2 мөр нэгтгэв</td>",
+    "explanation": ""
+  },
+   "43": {
+    "question": "Форм элемент ямар үүрэгтэй вэ?",
+    "answer": "Форм нь хэрэглэгчээс мэдээлэл авах зориулалттай.",
+    "explanation": ""
+  },
+   "44": {
+    "question": "Формоор дамжуулан хэрэглэгчээс мэдээлэл хэрхэн цуглуулдаг вэ?",
+    "answer": "<form action=process.php method=POST> <input type=text name=username> <input type=submit value=Явуулах> </form> ",
+    "explanation": ""
   }
+
 }

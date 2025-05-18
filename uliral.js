@@ -1,7 +1,7 @@
 let questions = [];
 let currentIndex = 0;
 let shuffledIndices = [];
-
+let answeredIndices = [];
 const questionContainer = document.getElementById("question-container");
 const prevBtn = document.getElementById("prev-btn");
 const nextBtn = document.getElementById("next-btn");
@@ -36,9 +36,16 @@ function shuffleArray(array) {
 }
 
 function renderQuestion() {
+  while (
+    currentIndex < questions.length &&
+    answeredIndices.includes(shuffledIndices[currentIndex])
+  ) {
+    currentIndex++;
+  }
+
   if (currentIndex >= questions.length) {
     questionContainer.innerHTML =
-      '<p class="end-message">Бүх асуултууд дууссан!</p>';
+      '<p class="end-message">Хариулаагүй асуулт үлдсэнгүй!</p>';
     nextBtn.style.display = "none";
     return;
   }
@@ -70,6 +77,12 @@ function toggleAnswer() {
     answerLine.style.display = "block";
     explanationLine.style.display = "block";
     showAnswerBtn.textContent = "Хариуг нуух";
+
+    // mark this question as answered
+    const questionIndex = shuffledIndices[currentIndex];
+    if (!answeredIndices.includes(questionIndex)) {
+      answeredIndices.push(questionIndex);
+    }
   } else {
     answerLine.style.display = "none";
     explanationLine.style.display = "none";
